@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { habitLogsQuery, habitsQuery, toggleHabitToday } from "@/features/habits/api";
 import { bucketToday, tasksQuery, toggleTask } from "@/features/tasks/api";
-import { deletePriority, prioritiesTodayQuery, togglePriority, upsertPriority } from "@/features/priorities/api";
+import { deletePriority, prioritiesTodayQuery, togglePriority, upsertPriority, type Priority } from "@/features/priorities/api";
 import { profileQuery, settingsQuery, updateSettings } from "@/features/settings/api";
 import { greetingFor, todayISO, formatFR } from "@/lib/date";
 import { sfx } from "@/lib/sounds";
@@ -161,7 +161,7 @@ export function DashboardPage() {
   );
 }
 
-function PriorityRow({ pos, value, onSaved }: { pos: 1 | 2; value?: { id: string; text: string; done: boolean }; onSaved: () => void }) {
+function PriorityRow({ pos, value, onSaved }: { pos: 1 | 2; value?: Priority; onSaved: () => void }) {
   const [editing, setEditing] = useState(!value);
   const [text, setText] = useState(value?.text ?? "");
   useEffect(() => { setText(value?.text ?? ""); setEditing(!value); }, [value]);
