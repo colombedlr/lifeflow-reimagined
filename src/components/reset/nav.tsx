@@ -24,9 +24,9 @@ export function SideNav() {
   return (
     <aside className="sticky top-0 hidden h-dvh w-60 shrink-0 border-r border-sidebar-border bg-sidebar text-sidebar-foreground md:flex md:flex-col">
       <div className="flex items-center gap-2 px-5 py-6">
-        <div className="h-8 w-8 rounded-xl bg-primary" />
+        <div className="y2k-orb h-8 w-8" />
         <div className="min-w-0">
-          <div className="font-serif text-lg leading-none">Reset</div>
+          <div className="chrome-text font-serif text-lg leading-none">Reset</div>
           <div className="text-xs text-muted-foreground">LifeOS</div>
         </div>
       </div>
@@ -39,9 +39,9 @@ export function SideNav() {
               key={it.to}
               to={it.to}
               className={cn(
-                "flex min-h-11 items-center gap-3 rounded-xl px-3 text-sm transition-colors",
+                "flex min-h-11 items-center gap-3 rounded-full px-3 text-sm transition-colors",
                 active
-                  ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
+                  ? "pill-active font-medium text-sidebar-accent-foreground"
                   : "text-muted-foreground hover:bg-sidebar-accent/60 hover:text-sidebar-accent-foreground",
               )}
             >
@@ -54,7 +54,7 @@ export function SideNav() {
       <div className="px-3 pb-4">
         <Link
           to="/focus"
-          className="flex min-h-11 items-center justify-center gap-2 rounded-xl bg-primary px-3 text-sm font-medium text-primary-foreground shadow-sm transition-transform hover:scale-[1.01] active:scale-[0.99]"
+          className="btn-gloss flex min-h-11 items-center justify-center gap-2 rounded-full px-3 text-sm font-medium text-primary-foreground transition-transform hover:scale-[1.01] active:scale-[0.99]"
         >
           <Focus className="h-4 w-4" /> Mode focus
         </Link>
