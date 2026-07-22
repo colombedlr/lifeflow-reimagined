@@ -74,8 +74,8 @@ function AuthPage() {
       <Decorations enabled />
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-3 h-10 w-10 rounded-2xl bg-primary" />
-          <h1 className="font-serif text-3xl">Reset LifeOS</h1>
+          <div className="y2k-orb mx-auto mb-3 h-12 w-12" />
+          <h1 className="chrome-text font-serif text-3xl">Reset LifeOS</h1>
           <p className="mt-1 text-sm text-muted-foreground">Ta boussole du quotidien.</p>
         </div>
         <div className="glass rounded-3xl p-6">
